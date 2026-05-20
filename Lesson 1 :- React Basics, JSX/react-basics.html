@@ -1,0 +1,58 @@
+<!-- tells to use modern version of webpage -->
+<!DOCTYPE html> 
+<!-- represents a website -->
+<html>
+  <!-- contain things that are not visible on the webpage -->
+  <head>
+    <title>React Basics</title>
+  </head>
+  <!-- contains things that are visible on the webpage -->
+  <body>
+    <div class="js-container"></div>
+
+    <!-- <script src="react-basics.js"></script> -->
+
+    <!-- <script src="https://unpkg.com/supersimpledev@8.6.4/external-library.js"></script> -->
+
+    <!-- these two are loading react external library -->
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <!-- what is babel?... babel = javascript comiler... translates other languages into javascript -->
+     <!-- while using react, we don't use normal javascript -->
+      <!-- we used an enhanced version of javascript = JSX -->
+       <!-- JSX = Javascript XML -->
+        <!-- = same as javascript, but we can write HTML directly in our Javascript code. -->
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+      const button = <button>hello</button>;
+      const paragraph = <p>paragraph of text</p>;
+
+      // div is a container element
+      const div = (
+        <div>
+          <button>hello</button>
+          <p>paragraph of text {2 + 2}</p>
+        </div>
+      );
+
+      // these two lines sets up react ...
+      const container = document.querySelector('.js-container');
+      // ReactDOM.createRoot() ... sets up React.
+      // to set up react we have to give it a html element. React uses the html element with class .container because it wants to keep things organized.
+      // render = display something
+      // ReactDOM.createRoot(container).render('Welcome to SuperSimpleDev React Course');
+      ReactDOM.createRoot(container).render(div);
+
+
+    </script>
+  </body>
+</html>
+
+<!-- 
+benefits of using react
+  1. creating a website with reacts feels natural.
+  2. JSX lets us find errors easier.
+  3. we can inser values inside JSX elements.
+-->
